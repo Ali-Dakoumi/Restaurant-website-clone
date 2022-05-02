@@ -1,0 +1,130 @@
+section.two {
+  position: relative;
+  padding-top: 6vh;
+  padding-bottom: 10vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(10, 80px);
+  grid-column-gap: 25px;
+  @include sm {
+    grid-template-rows: 20fr 8fr 8fr 2fr 20fr;
+    padding-top: 2vh;
+  }
+  @include md {
+    grid-template-rows: 15fr 4fr 2fr 2fr 15fr;
+  }
+
+  .big {
+    grid-column: 1 / span 7;
+    grid-row: 3 / span 8;
+    position: relative;
+    @include sm {
+      grid-column: 1 / span 12;
+      grid-row: 5/6;
+    }
+    @include md {
+      grid-column: 1 / span 12;
+      grid-row: 5 / 6;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      box-sizing: border-box;
+      padding: 0;
+      border: none;
+      margin: auto;
+      display: block;
+      width: 0;
+      height: 0;
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .small {
+    grid-column: 10 / span 4;
+    grid-row: 1 / span 3;
+    position: relative;
+    @include sm {
+      grid-column: 1 / span 12;
+      grid-row: 1 / 2;
+    }
+    @include md {
+      grid-column: 1 / span 12;
+      grid-row: 1 / 2;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      box-sizing: border-box;
+      padding: 0;
+      border: none;
+      margin: auto;
+      display: block;
+      width: 0;
+      height: 0;
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+  p.p3 {
+    grid-column: 8 / span 5;
+    grid-row: 6 / span 2;
+    @include sm {
+      grid-column: 1 / span 10;
+      grid-row: 2/3;
+      align-self: center;
+      padding-top: 25px;
+    }
+    @include md {
+      grid-column: 1 / span 10;
+      grid-row: 2/3;
+      align-self: center;
+    }
+  }
+  p.p4 {
+    grid-column: 8 / span 5;
+    grid-row: 8 / span 2;
+    @include sm {
+      grid-column: 1 / span 10;
+      grid-row: 3 / 4;
+      align-self: center;
+    }
+    @include md {
+      grid-column: 1 / span 10;
+      grid-row: 3/4;
+      align-self: center;
+    }
+  }
+
+  a.reserver {
+    grid-row: 12 / span 1;
+    grid-column: 11 / span 5;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 1.2rem;
+    @include sm {
+      grid-column: 1 / span 10;
+      grid-row: 4/5;
+      align-self: center;
+    }
+    @include md {
+      grid-column: 1 / span 10;
+      grid-row: 4/5;
+      align-self: center;
+    }
+  }
+}
