@@ -1138,7 +1138,8 @@ section.six {
   section.six {
     -ms-grid-rows: (5rem)[12];
         grid-template-rows: repeat(12, 5rem);
-    grid-row-gap: 25px;
+    grid-row-gap: 0;
+    grid-column-gap: 15px;
   }
 }
 
@@ -1287,8 +1288,8 @@ section.six .par {
   -ms-grid-row-span: 1;
   grid-row: 10 / span 1;
   -ms-grid-column: 7;
-  -ms-grid-column-span: 4;
-  grid-column: 7 / span 4;
+  -ms-grid-column-span: 5;
+  grid-column: 7 / span 5;
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
@@ -1296,9 +1297,9 @@ section.six .par {
 
 @media (min-width: 1000px) and (max-width: 1300px) {
   section.six .par {
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 6;
-    grid-column: 7 / 13;
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 7;
+    grid-column: 6 / 13;
     -ms-grid-row: 9;
     -ms-grid-row-span: 2;
     grid-row: 9 / span 2;
@@ -1323,15 +1324,18 @@ section.six .par {
     -ms-grid-row-span: 2;
     grid-row: 9 / span 2;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
-    grid-column: 1 / 7;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
 section.six .par h1 {
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 45px;
 }
 
 @media screen and (max-width: 600px) {
@@ -1363,9 +1367,9 @@ section.six .paragraph {
     -ms-grid-row: 11;
     -ms-grid-row-span: 4;
     grid-row: 11 / span 4;
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 5;
-    grid-column: 8 / span 5;
+    -ms-grid-column: 10;
+    -ms-grid-column-span: 3;
+    grid-column: 10 / span 3;
   }
 }
 

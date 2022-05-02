@@ -12,7 +12,8 @@ section.six {
   }
   @include lg {
     grid-template-rows: repeat(12, 5rem);
-    grid-row-gap: 25px;
+    grid-row-gap: 0;
+    grid-column-gap: 15px;
   }
   @include md {
     grid-row-gap: 0;
@@ -94,10 +95,10 @@ section.six {
   }
   .par {
     grid-row: 10 / span 1;
-    grid-column: 7 / span 4;
+    grid-column: 7 / span 5;
     align-self: start;
     @include lg {
-      grid-column: 7 / 13;
+      grid-column: 6 / 13;
       grid-row: 9 / span 2;
       position: relative;
     }
@@ -107,12 +108,13 @@ section.six {
     }
     @include md {
       grid-row: 9 / span 2;
-      grid-column: 1 / 7;
+      grid-column: 1 / span 12;
+      align-self: center;
     }
     h1 {
       text-transform: uppercase;
       font-weight: 400;
-      font-size: 50px;
+      font-size: 45px;
       @include sm {
         font-size: 30px;
       }
@@ -127,7 +129,7 @@ section.six {
     align-self: start;
     @include lg {
       grid-row: 11 / span 4;
-      grid-column: 8 / span 5;
+      grid-column: 10 / span 3;
     }
     @include sm {
       grid-column: 1 / span 12;
