@@ -35,8 +35,8 @@ toggleBtn.addEventListener("click", () => {
   });
 });
 
+// Animations
 window.addEventListener("load", () => {
-  // Animations
   const mySpan = document.querySelector(".letters");
   const textWrapper = document.querySelector(".letters").textContent;
   let myString = " ";
@@ -62,7 +62,7 @@ window.addEventListener("load", () => {
   gsap.set(".herosvg", { autoAlpha: 1 });
   gsap.from(".herosvg", 1.6, {
     opacity: 0,
-    y: 100,
+    y: 60,
     ease: Expo.easeOut,
   });
   gsap.set(".two .big", { autoAlpha: 1 });

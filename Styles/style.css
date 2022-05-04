@@ -108,7 +108,7 @@ header .menu .time .line {
       align-self: center;
   margin-left: 5px;
   margin-right: 5px;
-  border: var(--background-light) solid 1px;
+  border-top: var(--background-light) solid 1px;
 }
 
 @media (min-width: 600px) and (max-width: 1300px) {
