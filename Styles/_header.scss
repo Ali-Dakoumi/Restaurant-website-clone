@@ -13,6 +13,9 @@ header {
     img {
       height: 80px;
       align-self: end;
+      @include sm {
+        height: 60px;
+      }
     }
   }
   .menu {

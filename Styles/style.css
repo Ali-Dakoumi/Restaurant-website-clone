@@ -54,6 +54,12 @@ header .logo img {
       align-self: end;
 }
 
+@media screen and (max-width: 600px) {
+  header .logo img {
+    height: 60px;
+  }
+}
+
 header .menu {
   color: var(--background-light);
   -ms-grid-row: 1;
@@ -219,7 +225,7 @@ a {
 
 section.two {
   position: relative;
-  padding-top: 6vh;
+  padding-top: 8vh;
   padding-bottom: 10vh;
   display: -ms-grid;
   display: grid;
@@ -253,6 +259,7 @@ section.two .big {
   -ms-grid-row-span: 8;
   grid-row: 3 / span 8;
   position: relative;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 600px) {
@@ -307,6 +314,7 @@ section.two .small {
   -ms-grid-row-span: 3;
   grid-row: 1 / span 3;
   position: relative;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 600px) {
@@ -433,8 +441,8 @@ section.two a.reserver {
   -ms-grid-row-span: 1;
   grid-row: 12 / span 1;
   -ms-grid-column: 11;
-  -ms-grid-column-span: 5;
-  grid-column: 11 / span 5;
+  -ms-grid-column-span: 6;
+  grid-column: 11 / span 6;
   margin-bottom: 0;
   text-transform: uppercase;
   text-decoration: underline;
@@ -449,9 +457,9 @@ section.two a.reserver {
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
     grid-row: 4/5;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-flex-item-align: top;
+        -ms-grid-row-align: top;
+        align-self: top;
   }
 }
 
@@ -584,8 +592,8 @@ section.four {
 
 @media screen and (max-width: 600px) {
   section.four {
-    -ms-grid-rows: 50px 250px 1fr;
-        grid-template-rows: 50px 250px 1fr;
+    -ms-grid-rows: 50px 250px 1fr 50px;
+        grid-template-rows: 50px 250px 1fr 50px;
     grid-column-gap: 20px;
     padding-bottom: 2rem;
   }
@@ -618,8 +626,8 @@ section.four .bistrot {
 @media screen and (max-width: 600px) {
   section.four .bistrot {
     -ms-grid-column: 1;
-    -ms-grid-column-span: 14;
-    grid-column: 1 / span 14;
+    -ms-grid-column-span: 16;
+    grid-column: 1 / span 16;
   }
 }
 
@@ -686,8 +694,8 @@ section.four .bisimg {
 @media screen and (max-width: 600px) {
   section.four .bisimg {
     -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
-    grid-column: 1 / span 6;
+    -ms-grid-column-span: 7;
+    grid-column: 1 / span 7;
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
@@ -749,9 +757,9 @@ section.four .nomimg {
 
 @media screen and (max-width: 600px) {
   section.four .nomimg {
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 7;
-    grid-column: 8 / span 7;
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 8;
+    grid-column: 9 / span 8;
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
@@ -869,6 +877,31 @@ section.four .fourlink a {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  section.four .fourlink {
+    -ms-grid-column: 11;
+    -ms-grid-column-span: 4;
+    grid-column: 11 / span 4;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / span 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section.four .fourlink {
+    -ms-grid-column: 10;
+    -ms-grid-column-span: 7;
+    grid-column: 10 / span 7;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / span 1;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
   }
 }
 
@@ -1055,7 +1088,7 @@ section.five .par {
 
 @media screen and (max-width: 600px) {
   section.five .par p {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -1121,13 +1154,13 @@ section.six {
   -ms-grid-rows: (5rem)[13];
       grid-template-rows: repeat(13, 5rem);
   margin-top: 10rem;
-  margin-top: 10rem;
   grid-column-gap: 25px;
   grid-row-gap: 15px;
 }
 
 @media screen and (max-width: 600px) {
   section.six {
+    margin-top: 7rem;
     -ms-grid-rows: (5rem)[17];
         grid-template-rows: repeat(17, 5rem);
     grid-row-gap: 30px;
@@ -1549,6 +1582,7 @@ section.hero img.herosvg {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 600px) {

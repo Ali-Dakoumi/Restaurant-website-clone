@@ -123,6 +123,7 @@ section.hero {
     grid-area: fleche;
     justify-self: end;
     align-self: end;
+    visibility: hidden;
     @include sm {
       display: none;
     }
