@@ -35,40 +35,53 @@ toggleBtn.addEventListener("click", () => {
   });
 });
 
-// Animations
-var mySpan = document.querySelector(".letters");
-var textWrapper = document.querySelector(".letters").textContent;
-let myString = " ";
-let myarray = textWrapper.split(" ");
-myarray.forEach((el) => {
-  myString =
-    myString + `<span class="m7"><span class="word">\u00A0${el}</span></span>`;
-});
-mySpan.innerHTML = myString;
+window.addEventListener("load", () => {
+  // Animations
+  const mySpan = document.querySelector(".letters");
+  const textWrapper = document.querySelector(".letters").textContent;
+  let myString = " ";
+  let myarray = textWrapper.split(" ");
+  myarray.forEach((el) => {
+    myString =
+      myString +
+      `<span class="m7"><span class="word">\u00A0${el}</span></span>`;
+  });
+  mySpan.innerHTML = myString;
 
-gsap.set(".letters", { autoAlpha: 1 });
-gsap.from(".word", 1.2, {
-  opacity: 0.7,
-  rotation: "8deg",
-  y: 150,
-  ease: Expo.easeOut,
-  stagger: 0.04,
-});
-gsap.set(".herosvg", { autoAlpha: 1 });
-gsap.from(".herosvg", 1.6, {
-  opacity: 0,
-  y: 100,
-  ease: Expo.easeOut,
-});
-gsap.set(".two .big", { autoAlpha: 1 });
-gsap.from(".two .big", 1.8, {
-  opacity: 0,
-  scale: 1.2,
-  ease: Expo.easeOut,
-});
-gsap.set(".two .small", { autoAlpha: 1 });
-gsap.from(".two .small", 1.8, {
-  opacity: 0,
-  scale: 1.2,
-  ease: Expo.easeOut,
+  const paragraphs = document.querySelectorAll(".two p");
+  console.log(paragraphs);
+
+  gsap.set(".letters", { autoAlpha: 1 });
+  gsap.from(".word", 1.2, {
+    opacity: 0.7,
+    rotation: "8deg",
+    y: 150,
+    ease: Expo.easeOut,
+    stagger: 0.04,
+  });
+  gsap.set(".herosvg", { autoAlpha: 1 });
+  gsap.from(".herosvg", 1.6, {
+    opacity: 0,
+    y: 100,
+    ease: Expo.easeOut,
+  });
+  gsap.set(".two .big", { autoAlpha: 1 });
+  gsap.from(".two .big", 1.8, {
+    opacity: 0,
+    scale: 1.2,
+    ease: Expo.easeOut,
+  });
+  gsap.set(".two .small", { autoAlpha: 1 });
+  gsap.from(".two .small", 1.8, {
+    opacity: 0,
+    scale: 1.2,
+    ease: Expo.easeOut,
+  });
+
+  gsap.set(paragraphs, { autoAlpha: 1 });
+  gsap.from(paragraphs, 1.8, {
+    opacity: 0,
+    y: 20,
+    ease: Expo.easeOut,
+  });
 });

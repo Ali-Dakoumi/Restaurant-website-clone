@@ -85,6 +85,7 @@ section.two {
   p.p3 {
     grid-column: 8 / span 5;
     grid-row: 6 / span 2;
+    visibility: hidden;
     @include sm {
       grid-column: 1 / span 10;
       grid-row: 2/3;
@@ -100,6 +101,7 @@ section.two {
   p.p4 {
     grid-column: 8 / span 5;
     grid-row: 8 / span 2;
+    visibility: hidden;
     @include sm {
       grid-column: 1 / span 10;
       grid-row: 3 / 4;
