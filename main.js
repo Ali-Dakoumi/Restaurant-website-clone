@@ -3,8 +3,17 @@ const select = (e) => document.querySelector(e);
 const hourEl = document.querySelector(".hour");
 const logo = document.querySelectorAll("#logo");
 
+// get current time
 let currentDate = new Date();
-let time = currentDate.getHours() + ":" + currentDate.getMinutes();
+let hours =
+  currentDate.getHours() < 10
+    ? `0${currentDate.getHours()}`
+    : currentDate.getHours();
+let minutes =
+  currentDate.getMinutes() < 10
+    ? `0${currentDate.getMinutes()}`
+    : currentDate.getMinutes();
+let time = hours + ":" + minutes;
 setInterval(() => {
   hourEl.innerText = `${time}`;
 }, 1000);
@@ -12,12 +21,12 @@ setInterval(() => {
 // Smoooth Scrollbar
 let bodyScrollBar = Scrollbar.init(select("#viewport"), { damping: 0.09 });
 bodyScrollBar.track.xAxis.element.remove();
-
-// let hour = document.querySelector(".hour");
 var scrollToTop = document.querySelector(".top");
 scrollToTop.addEventListener("click", () => {
   bodyScrollBar.scrollTo(0, 0);
 });
+
+// dark mode
 const toggleBtn = document.querySelector(".hamburger");
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("lightmode");
@@ -25,6 +34,8 @@ toggleBtn.addEventListener("click", () => {
     logo.classList.toggle("blacklogo");
   });
 });
+
+// Animations
 var mySpan = document.querySelector(".letters");
 var textWrapper = document.querySelector(".letters").textContent;
 let myString = " ";
